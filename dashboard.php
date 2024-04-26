@@ -26,6 +26,16 @@
     <main id="property-list">
       
     </main>
+    <!--Modal-->
+    <div id="property-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Property Details</h2>
+            <div id="modal-property-details">
+            </div>
+        </div>
+    </div>
+
 </body>
  
 </html>
