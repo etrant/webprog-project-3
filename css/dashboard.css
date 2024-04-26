@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+.search-bar {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Properties */
+#property-list{
+    margin-top: 140px;
+}
+.property-card {
+    font-size: large;
+    display: flex;
+    border: 0px solid #ccc;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(7, 7, 7, 0.2) 0px 16px 48px;
+    width: 50%;
+}
+.price{
+background-color: lightgrey;
+border-radius: 5px;
+
+}
+.property-card img {
+    width: 200px;;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+}
+
+.property-details {
+    padding: 10px;
+    
+}
+
+.property-details h2 {
+    color: rgb(0, 100, 95);
+    margin-top: 0;
+    margin-left: 15px;;
+    font-style: italic;
+}
+
+.property-details p {
+    margin: 15px;
+}
+
+.property-details button {
+    padding: 5px 10px;
+    margin-left: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.property-details button:hover {
+    background-color: #0056b3;
+}
