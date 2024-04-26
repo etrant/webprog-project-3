@@ -17,8 +17,8 @@
                 <a href="/">HomeMarket</a>
             </div>
             <ul class="navlinks">
-                <li><a href="">Log in</a></li>
-                <li><a href="">Sign up</a></li>
+                <li><a href="login.php">Log in</a></li>
+                <li><a href="signup.php">Sign up</a></li>
             </ul>
         </nav>
     </header>
@@ -27,8 +27,8 @@
         <div class="centered">
             <h1>Welcome to HomeMarket</h1>
             <h2>Find your home that fits your budget</h2>
-            <a href="" class="button-link"><button class="main-btn">Log in</button></a>
-            <a href="" class="button-link"><button class="main-btn">Sign up</button></a>
+            <a href="login.php" class="button-link"><button class="main-btn">Log in</button></a>
+            <a href="signup.php" class="button-link"><button class="main-btn">Sign up</button></a>
 
         </div>
         <section class="content">
