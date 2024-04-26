@@ -7,7 +7,6 @@
     <title>Register</title>
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/auth.css">
-    <script src="validate.js"></script>
 </head>
 
 <body>
@@ -23,12 +22,28 @@
         </nav>
     </header>
 
-    <form>
-        <section></section>
-        <section></section>
-        <section></section>
-        <button></button>
-    </form>
+    <div class="form-container">
+        <form id="signupForm" action="your-server-endpoint.php" method="POST">
+            <section class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <div class="error-message"></div>
+            </section>
+            <section class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                <div class="error-message"></div>
+            </section>
+            <section class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                <div class="error-message"></div>
+            </section>
+            <button type="submit">Create account</button>
+            <p class="login-text">Already have an account? <a href="login.php">Log in</a></p>
+        </form>
+    </div>
+    <script src="./js/validate.js"></script>
 
 </body>
 
