@@ -84,3 +84,10 @@ footer {
 footer p {
 	color: #6e6e6e;
 }
+
+.active,
+.active a {
+	pointer-events: none;
+	cursor: none;
+	color: #6e6e6e !important;
+}
