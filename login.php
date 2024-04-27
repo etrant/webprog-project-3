@@ -17,7 +17,7 @@ $_SESSION['page'] = "login.php";
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.php">HomeMarket | Login</a>
+                <a href="index.php">HomeMarket</a>
             </div>
             <ul class="navlinks">
                 <li class="active"><a href="login.php">Log in</a></li>
