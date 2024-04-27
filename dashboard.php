@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,12 @@
     <link rel="stylesheet" href="./css/global.css">
     <script src="js/dashboard.js"></script>
 </head>
+
 <body>
     <header>
-    <nav class="navbar">
+        <nav class="navbar">
             <div class="logo">
-                <a href="/">HomeMarket</a>
+                <a href="index.php">HomeMarket</a>
             </div>
             <ul class="navlinks">
                 <h1>Dashboard</h1>
@@ -24,7 +26,7 @@
         </nav>
     </header>
     <main id="property-list">
-      
+
     </main>
     <!--Modal-->
     <div id="property-modal" class="modal">
@@ -37,5 +39,5 @@
     </div>
 
 </body>
- 
+
 </html>

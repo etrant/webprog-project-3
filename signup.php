@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['page'] = "signup.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +17,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="/">HomeMarket</a>
+                <a href="signup.php">HomeMarket</a>
             </div>
             <ul class="navlinks">
                 <li><a href="login.php">Log in</a></li>
@@ -23,7 +27,7 @@
     </header>
 
     <div class="form-container">
-        <form id="signupForm" action="your-server-endpoint.php" method="POST">
+        <form id="signupForm" action="auth.php" method="POST">
             <section class="input-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -40,7 +44,7 @@
                 <div class="error-message"></div>
             </section>
             <button type="submit">Create account</button>
-            <p class="login-text">Already have an account? <a href="login.php">Log in</a></p>
+            <p class="login-text">Already have an account? <a href="signup.php">Log in</a></p>
         </form>
     </div>
     <script src="./js/validate.js"></script>

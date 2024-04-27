@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['page'] = "login.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +17,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="/">HomeMarket</a>
+                <a href="index.php">HomeMarket</a>
             </div>
             <ul class="navlinks">
                 <li class="active"><a href="login.php">Log in</a></li>
@@ -23,7 +27,7 @@
     </header>
 
     <div class="form-container">
-        <form id="loginForm" action="your-server-endpoint.php" method="POST">
+        <form id="loginForm" action="auth.php" method="POST">
             <section class="input-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>

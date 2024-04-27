@@ -14,7 +14,7 @@
 
         <nav class="navbar">
             <div class="logo">
-                <a href="/">HomeMarket</a>
+                <a href="index.php">HomeMarket</a>
             </div>
             <ul class="navlinks">
                 <li><a href="login.php">Log in</a></li>
