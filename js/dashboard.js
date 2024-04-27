@@ -73,13 +73,19 @@ document.addEventListener('DOMContentLoaded', function () {
             <p><strong>Address:</strong> ${property.address}</p>
             <p><strong>Price:</strong> ${property.price}</p>
             <p><strong>Description:</strong> ${property.description}</p>
+            <button class="wishlist-btn">Add to Wishlist</button>
         `;
+        const wishlistBtn = modalPropertyDetails.querySelector('.wishlist-btn');
+        wishlistBtn.addEventListener('click', function() {
+            wishlistBtn.innerHTML = "Added";
+            wishlistBtn.disabled = true; 
+        });
     }
 
     closeModalBtn.addEventListener('click', function() {
         modal.style.display = 'none';
     });
-
+ 
     window.addEventListener('click', function(event) {
         if (event.target == modal) {
             modal.style.display = 'none';

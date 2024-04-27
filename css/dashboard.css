@@ -60,6 +60,12 @@ header {
 #modal-property-details img{
     width: 600px;
 }
+#modal-property-details button{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 15px;
+}
 #modal-property-details{
     background-color: lightsteelblue;
     color: black;
