@@ -1,10 +1,14 @@
+<?php
+session_start();
+$_SESSION['page'] = "signup.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>HomeMarket | Sign up</title>
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/auth.css">
 </head>
@@ -13,7 +17,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="/">HomeMarket</a>
+                <a href="signup.php">HomeMarket</a>
             </div>
             <ul class="navlinks">
                 <li><a href="login.php">Log in</a></li>
@@ -23,7 +27,7 @@
     </header>
 
     <div class="form-container">
-        <form id="signupForm" action="your-server-endpoint.php" method="POST">
+        <form id="signupForm" action="auth.php" method="POST">
             <section class="input-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -41,6 +45,22 @@
             </section>
             <button type="submit">Create account</button>
             <p class="login-text">Already have an account? <a href="login.php">Log in</a></p>
+
+            <?php
+            if (isset($_GET["status"])) {
+                switch ($_GET["status"]) {
+                    case 'invalid':
+                        echo '<div class="error-message error server">Invalid username or password.</div>';
+                        break;
+                    case 'email_exists';
+                        echo '<div class="error-message error server">Email already in use.</div>';
+                        break;
+                    case 'error';
+                        echo '<div class="error-message error server">Something went wrong.</div>';
+                        break;
+                }
+            }
+            ?>
         </form>
     </div>
     <script src="./js/validate.js"></script>
