@@ -40,6 +40,22 @@ $_SESSION['page'] = "login.php";
             </section>
             <button type="submit">Log in</button>
             <p class="login-text">Need an account? <a href="signup.php">Sign up</a></p>
+
+            <?php
+            if (isset($_GET["status"])) {
+                switch ($_GET["status"]) {
+                    case 'invalid':
+                        echo '<div class="error-message error server">Invalid username or password.</div>';
+                        break;
+                    case 'email_exists';
+                        echo '<div class="error-message error server">Email already in use.</div>';
+                        break;
+                    case 'error';
+                        echo '<div class="error-message error server">Something went wrong.</div>';
+                        break;
+                }
+            }
+            ?>
         </form>
 </body>
 
