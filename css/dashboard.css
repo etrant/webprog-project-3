@@ -75,13 +75,14 @@ header {
     width: 600px;
 }
 .close{
+    color: red;
     position: relative;
     left: 63%;
- top: 100px;
+    top: 100px;
     width: fit-content;
     display: flex;
     font-size: 80px;
-    cursor: p;
+    cursor: pointer;
 }
 /* Properties */
 #property-list{
