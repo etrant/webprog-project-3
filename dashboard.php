@@ -1,4 +1,13 @@
 <?php
+
+session_start();
+
+// Check if there's a welcome status message
+if (isset($_GET['status']) && $_GET['status'] === "welcome") {
+    echo "<h1>Welcome to our platform! We're thrilled to have you on board.</h1>";
+}
+
+
 $host = "localhost";
 $user = "uthompson3";
 $pass = "uthompson3";
@@ -79,8 +88,10 @@ $conn->close();
         <h1>Welcome to HomeMarket</h1>
         <h2>Find your dream home here</h2>
        <div class="search-bar">
-                    <input type="text" placeholder="Search for a property">
+         <form method="GET" action="">
+                    <input type="text" name='search' placeholder="Search for a property">
                     <button type="submit">Search</button>
+</form>
                 </div>
     </div>
     <main id="property-list">
