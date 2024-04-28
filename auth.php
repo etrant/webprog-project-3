@@ -60,7 +60,7 @@ function handleSignup(object $mysqli): void
 
         $_SESSION["user"] = $generatedId;
 
-        header("location: dashboard.php");
+        header("location: dashboard.php?status=welcome");
         return;
     }
     // Generic error handling if execute fails mysteriously

@@ -2,11 +2,6 @@
 
 session_start();
 
-// Check if there's a welcome status message
-if (isset($_GET['status']) && $_GET['status'] === "welcome") {
-    echo "<h1>Welcome to our platform! We're thrilled to have you on board.</h1>";
-}
-
 
 $host = "localhost";
 $user = "uthompson3";
@@ -80,16 +75,28 @@ $conn->close();
                 <h1>Dashboard</h1>
                 <form action="functions.php" method="post">
                 <li><a href="functions.php?action=signOut">Log Out</a></li>
+                <li><?php $_SESSION["user"]?></li>
         </form>
             </ul>
         </nav>
     </header>
     <div class="centered">
-        <h1>Welcome to HomeMarket</h1>
-        <h2>Find your dream home here</h2>
+        <?php
+        
+        if (isset($_GET['status'])) {
+
+echo '<h1>Welcome to our platform. Thank you for choosing us for your purchasing needs</h1>';
+ echo '  <h2>Lets find your dream home</h2>';
+}
+else{
+    
+    echo '<h1>Welcome to HomeMarket</h1>';
+    echo '  <h2>Find your dream home here</h2>';
+}
+?>
        <div class="search-bar">
          <form method="GET" action="">
-                    <input type="text" name='search' placeholder="Search for a property">
+                    <input type="text" name='search' placeholder="Search for a property by name, address, or price">
                     <button type="submit">Search</button>
 </form>
                 </div>

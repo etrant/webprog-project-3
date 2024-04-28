@@ -21,7 +21,7 @@ header {
 }
 
 .search-bar input[type="text"] {
-    width: 300px;
+    width: 310px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
