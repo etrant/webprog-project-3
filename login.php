@@ -1,6 +1,10 @@
 <?php
 session_start();
 $_SESSION['page'] = "login.php";
+if (isset($_SESSION["user_id"])) {
+    header("location: dashboard.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

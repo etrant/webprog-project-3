@@ -1,152 +1,136 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-}
-
 .search-container {
-    text-align: center; 
+	text-align: center;
 }
 
 .search-bar {
-    margin: 20px;
-    display: inline-block; 
+	margin: 20px;
+	display: inline-block;
 }
 
 .search-bar input[type="text"] {
-    width: 310px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    outline: none;
+	width: 310px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px 0 0 5px;
+	outline: none;
 }
 
 .search-bar button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
+	padding: 10px 20px;
+	background-color: #007a70;
+	color: #fff;
+	border: none;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
 }
 
 .search-bar button:hover {
-    background-color: #0056b3;
+	background-color: rgb(0, 100, 95);
 }
 .centered {
 	text-align: center;
 	padding: 8rem 0 4rem 0;
 }
 
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    overflow: auto; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4)
+main {
+	display: flex;
+	justify-content: center;
 }
-#property-modal{
-    justify-content: center;
-    text-align: center;
-    margin: auto;
+
+#properties-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px; /* Space between cards */
 }
-#modal-property-details img{
-    width: 600px;
-}
-#modal-property-details button{
-    width: 200px;
-    height: 30px;
-    border-radius: 5px;
-    margin: 15px;
-}
-#modal-property-details{
-    background-color: lightsteelblue;
-    color: black;
-    text-align: center;
-    margin: auto;
-    font-size: 30px;
-    width: 600px;
-}
-.close{
-    color: red;
-    position: relative;
-    left: 63%;
-    top: 100px;
-    width: fit-content;
-    display: flex;
-    font-size: 80px;
-    cursor: pointer;
-}
-/* Properties */
-#property-list{
-    display: flex;
-    flex-wrap: wrap;
-  justify-content: space-around;
-}
+
+/* Styling for each property card */
 .property-card {
-    font-size: large;
-    display: flex;
-    border: 0px solid #ccc;
-    margin-top: 5px;
-    margin-left: 5px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: rgba(7, 7, 7, 0.2) 0px 16px 48px;
-    width: 25%;
-}
-.price{
-background-color: lightgrey;
-border-radius: 5px;
-
-}
-.property-card img {
-    width: 200px;;
-    object-fit: cover;
-    border-radius: 5px 0 0 5px;
+	position: relative;
+	width: 350px; /* Fixed width for each card */
+	overflow: hidden; /* Ensures nothing spills out */
+	cursor: pointer;
+	transition-property: box-shadow;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px 0px;
+	border-radius: 4px;
 }
 
-.property-details {
-    padding: 10px;
-    
+.property-card:hover {
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px 0px;
 }
 
-.property-details h2 {
-    color: rgb(0, 100, 95);
-    margin-top: 0;
-    margin-left: 15px;;
-    font-style: italic;
+/* Styling for images to fit the exact size */
+.property-image {
+	width: 100%;
+	height: 150px;
+	object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
 }
 
-.property-details p {
-    margin: 15px;
+/* Text sizing for headers and paragraphs */
+h3 {
+	font-size: 20px; /* Set the size for h3 headers */
+	margin: 8px 0; /* Adjust spacing as needed */
 }
 
-.property-details button {
-    padding: 5px 10px;
-    margin-left: 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+p {
+	font-size: 14px; /* Set the size for paragraphs */
+	margin: 4px 0; /* Adjust spacing as needed */
 }
 
-.property-details button:hover {
-    background-color: #0056b3;
+/* Inline styling for property specs */
+.property-specs {
+	list-style: none; /* Remove default list styling */
+	padding: 0; /* Remove padding */
+	margin: 8px 0; /* Adjust margin for visual spacing */
+	display: flex; /* Align items in a row */
+}
+
+.property-specs li {
+	text-align: center; /* Centers the text within each spec */
+}
+
+.property-specs li:not(:last-child):after {
+	content: "|"; /* Adds a pipe after each item except the last */
+	margin: 0 5px; /* Space around the pipe */
+}
+
+.property-glance {
+	padding: 10px; /* Padding inside the glance section for spacing */
+}
+
+.wish-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	background-color: transparent;
+	width: 32px;
+	outline: none;
+	border: 0;
+	height: auto;
+}
+
+.wish-icon {
+	display: block;
+	width: 32px;
+	height: 32px;
+	margin: 5px -5px;
+}
+
+.HeartIcon__fill {
+	opacity: 0.2;
+	filter: invert(29%) sepia(91%) saturate(705%) hue-rotate(134deg)
+		brightness(100%) contrast(101%);
+}
+
+.wish-btn .HeartIcon__fill:hover {
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-timing-function: ease;
+}
+
+.HeartIcon__outline {
+	filter: invert(100%);
 }

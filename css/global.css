@@ -60,6 +60,10 @@ header {
 	margin-right: 10px;
 }
 
+.navlinks.single-element li {
+	border-right: none !important;
+}
+
 .logo {
 	display: flex;
 	align-items: center;
