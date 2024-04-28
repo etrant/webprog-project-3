@@ -26,6 +26,7 @@
 
 .button-link {
 	text-decoration: none;
+	margin-left: 10px;
 }
 
 .centered button.main-btn:hover {

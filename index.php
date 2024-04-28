@@ -37,12 +37,12 @@
                 <p>We specialize in providing affordable housing solutions for everyone.</p>
             </div>
             <div class="image-panel">
-                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Placeholder Image">
+                <img src="./img/img1.avif" alt="Placeholder Image">
             </div>
         </section>
         <section class="content">
             <div class="image-panel">
-                <img src="https://plus.unsplash.com/premium_photo-1682431603216-c726635723fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNoYWtpbmclMjBoYW5kc3xlbnwwfHwwfHx8MA%3D%3D" alt="Placeholder Image">
+                <img src="./img/img2.avif" alt="Placeholder Image">
             </div>
             <div class="text-panel">
                 <h3>Our Services</h3>
@@ -55,12 +55,12 @@
                 <p>Our unique approach to affordable housing stands out from the competition, making us your best choice.</p>
             </div>
             <div class="image-panel">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdXNlfGVufDB8fDB8fHww" alt="Placeholder Image">
+                <img src="./img/img3.avif" alt="Placeholder Image">
             </div>
         </section>
         <section class="content">
             <div class="image-panel">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdXNlfGVufDB8fDB8fHww" alt="Placeholder Image">
+                <img src="./img/img4.avif" alt="Placeholder Image">
             </div>
             <div class="text-panel">
                 <h3>Customer Attraction</h3>

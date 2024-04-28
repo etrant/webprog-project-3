@@ -44,7 +44,7 @@ $_SESSION['page'] = "signup.php";
                 <div class="error-message"></div>
             </section>
             <button type="submit">Create account</button>
-            <p class="login-text">Already have an account? <a href="signup.php">Log in</a></p>
+            <p class="login-text">Already have an account? <a href="login.php">Log in</a></p>
         </form>
     </div>
     <script src="./js/validate.js"></script>
