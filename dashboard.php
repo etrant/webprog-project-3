@@ -18,13 +18,20 @@
             </div>
             <ul class="navlinks">
                 <h1>Dashboard</h1>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search for a property">
-                    <button type="submit">Search</button>
-                </div>
+                <form action="functions.php" method="post">
+                <li><a href="functions.php?action=signOut">Log Out</a></li>
+        </form>
             </ul>
         </nav>
     </header>
+    <div class="centered">
+        <h1>Welcome to HomeMarket</h1>
+        <h2>Find your dream home here</h2>
+       <div class="search-bar">
+                    <input type="text" placeholder="Search for a property">
+                    <button type="submit">Search</button>
+                </div>
+    </div>
     <main id="property-list">
 
     </main>
@@ -35,6 +42,7 @@
             <h2>Property Details</h2>
             <div id="modal-property-details">
             </div>
+          
         </div>
     </div>
 

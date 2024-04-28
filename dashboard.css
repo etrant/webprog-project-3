@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 0px;
     padding: 0;
 }
 
@@ -11,13 +11,10 @@ header {
     padding: 5px;
 }
 
-.search-container {
-    text-align: center; 
-}
-
 .search-bar {
-    margin: 20px;
-    display: inline-block; 
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 .search-bar input[type="text"] {
@@ -40,11 +37,6 @@ header {
 .search-bar button:hover {
     background-color: #0056b3;
 }
-.centered {
-	text-align: center;
-	padding: 8rem 0 4rem 0;
-}
-
 /* Modal */
 .modal {
     display: none;
@@ -84,19 +76,19 @@ header {
 }
 .close{
     color: white;
+    background-color: white;
     position: relative;
     left: 75%;
  top: 100px;
     width: fit-content;
     display: flex;
     font-size: 80px;
-    cursor: p;
+    cursor: pointer;
 }
 /* Properties */
 #property-list{
-    display: flex;
-    flex-wrap: wrap;
-  justify-content: space-around;
+    margin-top: 140px;
+   
 }
 .property-card {
     font-size: large;
