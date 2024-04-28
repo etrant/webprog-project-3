@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if (!empty($_GET["search"]) || isset($_GET["search"])) {
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +63,15 @@ session_start();
         </div>
     </main>
     <script src="./js/dashboard.js"></script>
+    <script>
+        window.onload = function() {
+            <?php if (isset($_GET['search']) && !empty($_GET['search'])) : ?>
+                getProperties("<?php echo htmlspecialchars($_GET['search']); ?>")
+            <?php else : ?>
+                getProperties();
+            <?php endif; ?>
+        };
+    </script>
 </body>
 
 </html>

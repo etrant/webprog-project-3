@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
-	fetch("property_data.php") // URL to your PHP script
+async function getProperties(query = "") {
+	if (query.length > 0) {
+		query = "?query=" + query;
+	}
+	await fetch("property_data.php" + query) // URL to your PHP script
 		.then((response) => response.json())
 		.then((data) => {
 			console.log(data);
@@ -31,4 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		})
 		.catch((error) => console.error("Error fetching data:", error));
-});
+}
