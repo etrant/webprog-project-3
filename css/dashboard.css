@@ -120,11 +120,11 @@ p {
 
 .HeartIcon__fill {
 	opacity: 0.2;
-	filter: invert(29%) sepia(91%) saturate(705%) hue-rotate(134deg)
-		brightness(100%) contrast(101%);
+	filter: invert(51%) sepia(53%) saturate(7350%) hue-rotate(340deg)
+		brightness(107%) contrast(112%);
 }
 
-.wish-btn .HeartIcon__fill:hover {
+:not(.wishlisted) .wish-btn .HeartIcon__fill:hover {
 	opacity: 1;
 	transition-property: opacity;
 	transition-duration: 0.1s;
@@ -133,4 +133,8 @@ p {
 
 .HeartIcon__outline {
 	filter: invert(100%);
+}
+
+.wishlisted .wish-btn .HeartIcon__fill {
+	opacity: 1;
 }

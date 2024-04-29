@@ -1,9 +1,5 @@
 <?php
 session_start();
-
-if (!empty($_GET["search"]) || isset($_GET["search"])) {
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -66,9 +62,9 @@ if (!empty($_GET["search"]) || isset($_GET["search"])) {
     <script>
         window.onload = function() {
             <?php if (isset($_GET['search']) && !empty($_GET['search'])) : ?>
-                getProperties("<?php echo htmlspecialchars($_GET['search']); ?>")
+                getProperties("<?php echo htmlspecialchars($_GET['search']) ?>", <?php echo $_SESSION["user_id"]; ?>);
             <?php else : ?>
-                getProperties();
+                getProperties("", <?php echo $_SESSION["user_id"]; ?>);
             <?php endif; ?>
         };
     </script>
