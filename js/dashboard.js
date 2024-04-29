@@ -35,6 +35,13 @@ async function getProperties(query = "", user_id = -1) {
 				}, ${property.state} ${property.zipcode}</p>
                     </div>
                 `;
+				card.addEventListener("click", (e) => {
+					if (!e.target.classList.contains("HeartIcon__fill")) {
+						console.log(card.id);
+						openModal(card.id);
+					}
+				});
+
 				container.appendChild(card);
 			});
 		})
@@ -73,8 +80,6 @@ async function wishlist(property_id, user_id) {
 					headers: {
 						"Content-type": "application/json; charset=UTF-8",
 					},
-
-
 				});
 			} else {
 				card.classList.add("wishlisted");
@@ -94,3 +99,51 @@ async function wishlist(property_id, user_id) {
 		})
 		.catch((error) => console.error("Error fetching data:", error));
 }
+
+// Function to open modal
+async function openModal(card_id) {
+	await fetch(`property_single.php?id=${card_id}`)
+		.then((response) => response.json())
+		.then((data) => {
+			data.forEach((property) => {
+				document.getElementById(
+					"image"
+				).innerHTML = ` <img src="./img/img${property.id}.webp">`;
+				document.getElementById("price").innerHTML = `$${Number(
+					property.price.toLocaleString()
+				)}`;
+				document.getElementById(
+					"specs"
+				).innerHTML = `<li><b>${property.beds}</b> bds</li>
+                            <li><b>${property.bathrooms}</b> ba</li>
+                            <li><b>${property.square_footage}</b> sqft</li>`;
+
+				document.getElementById(
+					"address"
+				).innerHTML = `${property.address}, ${property.city}, ${property.state} ${property.zipcode}`;
+
+				document.getElementById(
+					"summary"
+				).innerHTML = `${property.description}`;
+			});
+		})
+		.catch((error) => console.error("Error fetching data:", error));
+
+	var modal = document.getElementById("modal");
+	modal.style.display = "block";
+	document.body.style.overflow = "hidden"; // Disable scroll
+}
+// Function to close modal
+function closeModal() {
+	var modal = document.getElementById("modal");
+	modal.style.display = "none";
+	document.body.style.overflow = "scroll"; // Enable scroll
+}
+
+// Close modal when clicking outside of it
+window.onclick = function (event) {
+	var modal = document.getElementById("modal");
+	if (event.target == modal) {
+		closeModal();
+	}
+};
