@@ -120,6 +120,7 @@ footer p {
 	position: fixed;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	height: 500px;
 }
 
 .modal-left {

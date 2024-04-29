@@ -35,7 +35,30 @@ session_start();
 
         </div>
     </main>
-
+    <div id="modal" class="modal-container">
+        <div class="modal-content">
+            <button onclick="closeModal()" class="close-button">&times;</button>
+            <div id="image" class="modal-left">
+            </div>
+            <div id=" model-content" class="modal-right">
+                <div class="property-glance">
+                    <h3>Price</h3>
+                    <p id="price" class="property-price">$950000</p>
+                    <h3>Property Overview</h3>
+                    <ul id="specs" class="property-specs">
+                        <li><b>3</b> bds</li>
+                        <li><b>2.5</b> ba</li>
+                        <li><b>2354</b> sqft</li>
+                    </ul>
+                    <h3>Property Location</h3>
+                    <p id="address" class="property-address">123 Sesame St, Clarkston, GA 30000</p>
+                    <h3>Seller Description</h3>
+                    <p id="summary" class="property_description">Blah blah blah blah blah.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
     <script>
         const user_id = <?php echo $_SESSION['user_id']; ?>;
         const container = document.getElementById("properties-list");
@@ -73,6 +96,12 @@ session_start();
 				}, ${property.state} ${property.zipcode}</p>
                     </div>
                 `;
+                    card.addEventListener("click", (e) => {
+                        if (!e.target.classList.contains("HeartIcon__fill")) {
+                            console.log(card.id);
+                            openModal(card.id);
+                        }
+                    });
                     container.appendChild(card);
                 });
             })

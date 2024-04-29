@@ -65,7 +65,7 @@ session_start();
             </div>
         </div>
     </div>
-
+    <script src="./js/modal.js"></script>
     <script src="./js/dashboard.js"></script>
     <script>
         window.onload = function() {
